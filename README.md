@@ -12,6 +12,17 @@ Que es Facebook Batch Requests?
 
 Mas info: https://developers.facebook.com/docs/reference/api/batch/.
 
+
+## Obtener fuentes con composer
+
+```json
+{
+    "require": {
+	"fgrochal/fbbatch": "dev-master"
+    }
+}
+```
+
 ## Ejemplos
 
 #### Multiples llamadas
