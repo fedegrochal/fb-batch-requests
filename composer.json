@@ -1,0 +1,22 @@
+{
+    "name": "fgrochal/fbbatch",
+    "type": "library",
+    "description": "Facebook Batch Requests class wrapper",
+    "keywords": ["facebook","batch","api","graph"],
+    "homepage": "https://github.com/fgrochal/fb-batch-requests",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Federico Grochal",
+            "email": "fgrochal@gmail.com",
+            "homepage": "https://github.com/fgrochal/fb-batch-requests",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "classmap": ["src"]
+    }
+}
