@@ -18,7 +18,7 @@ Mas info: https://developers.facebook.com/docs/reference/api/batch/.
 ```json
 {
     "require": {
-	"fgrochal/fbbatch": "dev-master"
+      "fgrochal/fbbatch": "dev-master"
     }
 }
 ```
