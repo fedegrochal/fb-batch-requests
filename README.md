@@ -32,7 +32,7 @@ var_dump($friends->getResult());
 
 ```php
 <?php 
-$fb = new Facebook(array('appId' => '421554467952992', 'secret' => '17ce533f90c240287a7cb8d18211fefb'));
+$fb = new Facebook(array('appId' => '####', 'secret' => '####'));
 $batch = new FbBatch($fb);
 
 $pageIds = array('pageId1', 'pageId2', 'pageId3', 'pageId4', 'pageId5', 'pageIdN');
