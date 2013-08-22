@@ -14,6 +14,7 @@ Mas info: https://developers.facebook.com/docs/reference/api/batch/.
 
 ## Ejemplos
 
+#### Multiples llamadas
 ```php
 <?php 
 $fb = new Facebook(array('appId' => '####', 'secret' => '####'));
@@ -24,15 +25,15 @@ $friends = $batch->api('/me/friends');
 
 $batch->send();
 
-
 var_dump($me->getResult());
 var_dump($friends->getResult());
 ?>
 ```
 
+#### Multiples llamadas
 ```php
 <?php 
-$fb = new Facebook(array('appId' => '####', 'secret' => '####'));
+$fb = new Facebook(array('appId' => '###', 'secret' => '###'));
 $batch = new FbBatch($fb);
 
 $pageIds = array('pageId1', 'pageId2', 'pageId3', 'pageId4', 'pageId5', 'pageIdN');
@@ -44,5 +45,22 @@ $calls = $batch->send();
 foreach($calls as $call) {
   var_dump($call->getResult());
 }
+?>
+```
+
+#### Dependencias
+```php
+<?php 
+$fb = new Facebook(array('appId' => '###', 'secret' => '###'));
+$batch = new FbBatch($fb);
+
+$me = $batch->api('/me');
+$favoriteAthletes = $batch->api('?ids=' . $me->getParam('favorite_athletes.*.id'));
+
+$batch->send();
+
+
+var_dump($me->getResult());
+var_dump($favoriteAthletes->getResult());
 ?>
 ```
